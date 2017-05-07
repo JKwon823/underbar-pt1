@@ -13,4 +13,9 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('reduces an array of letters to a string, *without* an explicit initial value for the accumulator', () => {
+    const nums = ['F', 'U', 'S', 'E', 'D'];
+    const result = _.reduce(nums, (a, b) => a + b);
+    expect(result).toEqual('FUSED');
+  });
 });

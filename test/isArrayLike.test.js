@@ -18,4 +18,11 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns false if an array-like object has length property thats not a typeof number', () => {
+    const arrayLikeObj = {
+      length: 'A'
+    };
+    expect(_.isArrayLike(arrayLikeObj)).toBe(false);
+  });
 });

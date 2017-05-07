@@ -17,5 +17,10 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns true if all values in the array are typeof string', () => {
+      const elements = ['A', 'B', 'C', 'D'];
+      expect(_.every(elements, el => typeof el === 'string')).toBe(true);
+    });
+
   });
 });

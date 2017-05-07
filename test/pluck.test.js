@@ -11,4 +11,13 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  it('returns an array of just teams, given an array of players objects', () => {
+    const players = [
+      { name: 'Lebron James', team: 'Cavs'},
+      { name: 'Kevin Durant', team: 'Warriors'},
+      { name: 'John Wall', team: 'Wizards'}
+    ];
+    const result = _.pluck(players, 'team');
+    expect(result).toEqual(['Cavs', 'Warriors', 'Wizards']);
+  });
 });

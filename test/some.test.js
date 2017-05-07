@@ -11,4 +11,9 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  it('returns true if at least one value in the array are typeof string', () => {
+    const elements = ['A', true, 3, 4];
+    expect(_.some(elements, el => typeof el === 'string')).toBe(true);
+  });
+
 });

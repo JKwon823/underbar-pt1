@@ -26,4 +26,8 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('strictly matches variable type', () => {
+    const arr = ['0', '0', 0];
+    expect(_.indexOf(arr, 0)).toBe(2);
+  });
 });
